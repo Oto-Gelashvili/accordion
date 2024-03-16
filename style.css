@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAEEFF;
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    height: 33%;
+    width: 100%;
+    z-index: -1;
+}
+.container{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3.6rem;
+    border-radius: 1.6rem;
+    gap: 2.4rem;
+    background-color: #FFFFFF;
+}
+.accordion-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2.4rem;
+}
+.accordion-title h1{
+    color: #2E1632;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+ul,li{
+    list-style: none;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+.li-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #2E1632;
+    font-weight: 700;
+    gap: 2rem;
+}
+.li-title:hover{
+    color: #B42FF3;
+    transition: 0.4s;
+    cursor: pointer;
+}
+p{
+    font-size: 1.6rem;
+}
+li{
+    border-top: 1px solid rgba(169, 169, 169, 0.15); /* Light gray with 0.5 opacity */
+    border-bottom: 1px solid rgba(169, 169, 169, 0.15); /* Light gray with 0.5 opacity */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-block: 1.6rem;
+    
+}
+.li-content {
+    font-weight: 400;
+    color: hsl(292, 16%, 49%);
+    width: 90%;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden{
+    display: none;
+}
+@media (max-width:768px) {
+    .container{
+        width: 300px;
+        padding: 2.4rem;
+        border-radius: 1.2rem;
+    }
+}
